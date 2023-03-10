@@ -1,3 +1,81 @@
 body {
-  background-color: red;
+  background-image: url("img.jpg");
+  background-size: cover;
+  height: 900px;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 600px;
+  height: 100%;
+}
+
+.bayan {
+  margin-top: 30px;
+}
+h1 {
+  text-align: center;
+}
+
+.bayan_item {
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.473);
+  background-color: rgba(2, 2, 12, 0.397);
+}
+
+.bayan_input:checked ~ .bayan_title {
+  background-color: #27155aa4;
+}
+
+.bayan_input:checked ~ .bayan_text {
+  display: block;
+  background-color: #27155aa4;
+}
+
+.bayan_text {
+  display: none;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.bayan_input:hover ~ .bayan_text {
+  display: block;
+}
+
+.bayan_title {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.2s ease-out;
+}
+
+.bayan_title:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #ffffff transparent transparent transparent;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bayan_input:checked ~ .bayan_title:after {
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+.bayan_title:hover {
+  background-color: #27155aa4;
+}
+
+.bayan_input {
+  appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
