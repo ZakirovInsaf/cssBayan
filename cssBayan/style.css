@@ -3,44 +3,69 @@ body {
   background-size: cover;
   height: 900px;
   color: white;
+  background-repeat: no-repeat;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .container {
   margin: 0 auto;
-  width: 600px;
+  width: 500px;
   height: 100%;
 }
 
 .bayan {
-  margin-top: 30px;
+  margin: 15px auto;
+  margin-bottom: 0;
+  padding: 10px;
+  padding-bottom: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.603);
+  background-color: rgba(0, 0, 0, 0.603);
+}
+.bayan:hover {
+  cursor: pointer;
 }
 h1 {
   text-align: center;
+  margin: 0;
+  font-size: 24px;
+  line-height: 0.8;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .bayan_item {
   margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.473);
-  background-color: rgba(2, 2, 12, 0.397);
+  background-color: rgba(2, 2, 12, 0.815);
 }
 
 .bayan_input:checked ~ .bayan_title {
-  background-color: #27155aa4;
+  background-color: #3500c7a4;
 }
 
 .bayan_input:checked ~ .bayan_text {
-  display: block;
-  background-color: #27155aa4;
+  visibility: visible;
+  opacity: 1;
+  height: 300px;
+  transition: 0.6s;
+  background-color: #3500c7a4;
 }
 
 .bayan_text {
-  display: none;
-  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
   padding: 5px;
+  transition: 0.6s;
+  overflow: hidden;
 }
-
+.giphy-embed {
+  overflow: hidden;
+}
 .bayan_input:hover ~ .bayan_text {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  height: 300px;
+  transition: 0.6s;
 }
 
 .bayan_title {
@@ -48,7 +73,8 @@ h1 {
   display: block;
   cursor: pointer;
   padding: 10px;
-  transition: background 0.2s ease-out;
+  transition: all 0.6s ease-out;
+  font-size: 16px;
 }
 
 .bayan_title:after {
@@ -61,16 +87,25 @@ h1 {
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.4s;
+}
+
+.bayan_input:hover ~ .bayan_title:after {
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #ffffff transparent;
+  transition: 0.4s;
 }
 
 .bayan_input:checked ~ .bayan_title:after {
   border-style: solid;
   border-width: 0 5px 8px 5px;
   border-color: transparent transparent #ffffff transparent;
+  transition: 0.4s;
 }
 
 .bayan_title:hover {
-  background-color: #27155aa4;
+  background-color: #3500c7a4;
 }
 
 .bayan_input {
