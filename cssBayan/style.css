@@ -12,6 +12,9 @@ body {
 }
 
 .bayan {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin: 0 auto;
   margin-bottom: 0;
   padding: 10px;
@@ -19,6 +22,14 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.603);
   background-color: rgba(0, 0, 0, 0.603);
 }
+
+.bayan_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+
 .bayan_container:hover {
   cursor: pointer;
   color: rgb(203, 126, 255);
@@ -29,12 +40,12 @@ h1 {
   font-size: 24px;
   line-height: 0.8;
   font-family: "Courier New", Courier, monospace;
+  
 }
 h1:hover {
   color: #ffffff;
 }
 .bayan_item {
-  margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.473);
   background-color: rgba(2, 2, 12, 0.815);
 }
@@ -72,7 +83,6 @@ h1:hover {
 }
 
 .bayan_title {
-  position: relative;
   display: block;
   cursor: pointer;
   padding: 10px;
@@ -80,6 +90,7 @@ h1:hover {
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  margin-top: -18px;
 }
 svg {
   fill: #ffffff;
@@ -104,8 +115,8 @@ svg {
 }
 
 .bayan_input {
+  visibility: hidden;
   appearance: none;
-  position: absolute;
   width: 0;
   height: 0;
 }
