@@ -5,12 +5,6 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 500px;
-  padding-top: 30px;
-}
-
 .bayan {
   display: flex;
   flex-direction: column;
@@ -161,12 +155,12 @@ svg {
 
 @media screen and (max-width: 375px) {
   .bayan {
-    width: 300px;
+    width: 250px;
   }
+  
 }
 
 @media (hover: hover) {
-  /* when hover is supported */
   .bayan_container:hover {
     cursor: pointer;
     color: rgb(203, 126, 255);
@@ -184,4 +178,14 @@ svg {
   .bayan_title:hover {
     background-color: #6127ff69;
   }
+}
+
+
+@media screen and (min-width: 300px) {
+  .container {
+    margin: 0 auto;
+    max-width: 500px;
+    padding-top: 30px;
+  }
+  
 }
