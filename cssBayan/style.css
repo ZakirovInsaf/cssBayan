@@ -23,31 +23,29 @@ body {
   background-color: rgba(0, 0, 0, 0.603);
 }
 
-.bayan_container{
+.bayan_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
 }
 
-.bayan_container:hover {
-  cursor: pointer;
-  color: rgb(203, 126, 255);
-}
 h1 {
   text-align: center;
   margin: 0;
   font-size: 24px;
   line-height: 0.8;
   font-family: "Courier New", Courier, monospace;
-  
 }
-h1:hover {
-  color: #ffffff;
-}
+
 .bayan_item {
   border: 1px solid rgba(255, 255, 255, 0.473);
   background-color: rgba(2, 2, 12, 0.815);
+}
+
+.bayan_item:active {
+  filter: brightness(150%);
+  transition: 0.5s;
 }
 
 .bayan_input:checked ~ .bayan_title {
@@ -75,12 +73,6 @@ h1:hover {
 .giphy-embed {
   overflow: hidden;
 }
-.bayan_input:hover ~ .bayan_text {
-  visibility: visible;
-  opacity: 1;
-  height: 250px;
-  transition: 0.6s;
-}
 
 .bayan_title {
   display: block;
@@ -92,6 +84,12 @@ h1:hover {
   justify-content: space-between;
   margin-top: -18px;
 }
+
+.bayan_title:active {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
 svg {
   fill: #ffffff;
   transform: rotate(90deg);
@@ -101,18 +99,13 @@ svg {
 .bayan_svg {
   width: 18px;
 }
-.bayan_input:hover ~ .bayan_title svg {
-  transform: rotate(270deg);
-  transition: 0.3s;
-}
+
 .bayan_input:checked ~ .bayan_title svg {
   transform: rotate(270deg);
   transition: 0.3s;
 }
 
-.bayan_title:hover {
-  background-color: #6127ff69;
-}
+
 
 .bayan_input {
   visibility: hidden;
@@ -128,24 +121,6 @@ svg {
 }
 
 @media screen and (max-width: 820px) {
-  .bayan_container:hover {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-  }
-
-  .bayan_input:hover ~ .bayan_text {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-  }
-
-  .bayan_input:hover ~ .bayan_title svg {
-    transform: rotate(90deg);
-    transition: 0.3s;
-  }
-  .bayan_title:hover {
-    background-color: rgba(0, 0, 0, 0.603);
-  }
 }
 @media screen and (max-width: 820px) {
   .bayan_text div {
@@ -189,5 +164,26 @@ svg {
 @media screen and (max-width: 375px) {
   .bayan {
     width: 300px;
+  }
+}
+
+@media (hover: hover) {
+  /* when hover is supported */
+  .bayan_container:hover {
+    cursor: pointer;
+    color: rgb(203, 126, 255);
+  }
+  .bayan_input:hover ~ .bayan_text {
+    visibility: visible;
+    opacity: 1;
+    height: 250px;
+    transition: 0.6s;
+  }
+  .bayan_input:hover ~ .bayan_title svg {
+    transform: rotate(270deg);
+    transition: 0.3s;
+  }
+  .bayan_title:hover {
+    background-color: #6127ff69;
   }
 }
