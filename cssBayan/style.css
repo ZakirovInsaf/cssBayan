@@ -194,9 +194,9 @@ svg {
     max-width: 500px;
     padding-top: 30px;
   }
-  svg {
-    visibility: visible;
-    transition: 0.3s;
-    opacity: 1;
-  }
+ 
+}
+
+@media screen and (max-width: 300px) {
+
 }
