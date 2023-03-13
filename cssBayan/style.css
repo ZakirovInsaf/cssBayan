@@ -110,6 +110,12 @@ svg {
   height: 0;
 }
 
+.bayan_container:hover .bayan_item .bayan_title svg {
+  visibility: visible;
+  transition: 0.3s;
+  opacity: 1;
+}
+
 @media screen and (min-width: 821px) {
   body {
     height: 1080px;
@@ -168,11 +174,7 @@ svg {
     cursor: pointer;
     color: rgb(203, 126, 255);
   }
-  .bayan_container:hover .bayan_item .bayan_title svg {
-    visibility: visible;
-    transition: 0.3s;
-    opacity: 1;
-  }
+
   .bayan_input:hover ~ .bayan_text {
     visibility: visible;
     opacity: 1;
@@ -194,9 +196,7 @@ svg {
     max-width: 500px;
     padding-top: 30px;
   }
- 
 }
 
-@media screen and (max-width: 300px) {
-
+@media screen and (max-width: 375px) {
 }
