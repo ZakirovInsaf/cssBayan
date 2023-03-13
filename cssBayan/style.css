@@ -85,12 +85,16 @@ h1 {
 }
 
 svg {
+  visibility: hidden;
+  opacity: 0;
   fill: #ffffff;
   transform: rotate(90deg);
   transition: 0.3s;
   width: 20px;
 }
+
 .bayan_svg {
+  visibility: hidden;
   width: 18px;
 }
 
@@ -157,7 +161,6 @@ svg {
   .bayan {
     width: 250px;
   }
-  
 }
 
 @media (hover: hover) {
@@ -165,6 +168,13 @@ svg {
     cursor: pointer;
     color: rgb(203, 126, 255);
   }
+
+  .bayan_container:hover .bayan_item .bayan_title svg {
+    visibility: visible;
+    transition: 0.3s;
+    opacity: 1;
+  }
+
   .bayan_input:hover ~ .bayan_text {
     visibility: visible;
     opacity: 1;
@@ -180,12 +190,10 @@ svg {
   }
 }
 
-
 @media screen and (min-width: 300px) {
   .container {
     margin: 0 auto;
     max-width: 500px;
     padding-top: 30px;
   }
-  
 }
